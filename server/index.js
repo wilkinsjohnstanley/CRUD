@@ -7,6 +7,7 @@ import dotenv from "dotenv";
 
 
 const app = express();
+
 app.use(bodyParser.json());
 dotenv.config();
 
