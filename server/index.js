@@ -1,7 +1,7 @@
+import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
-import express from "express";
 import route from "./routes/userRoute.js"
 
 //const express = require("express");
