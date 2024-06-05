@@ -47,7 +47,38 @@ export const getUserById = async(req, res)=>{
         res.status(500).json({errorMessage:error.message})
 
     }
+};
+//UPDATE - i.e. PUT user by I.D.
+export const update = async(req, res)=>{
+    try {
+        const id = req.params.id;
+        const userExist = await User.findById(id);
+        if(!userExist){
+            return res.status(404).json({message:"User not found."});
+        }
+       const updatedData =  await User.findByIdAndUpdate(id, req.body, {
+            new:true
+        })
+        res.status(200).json(updatedData);
+    } catch (error) {
+        res.status(500).json({errorMessage:error.message});
+    }
+};
+//DELETE - i.e. delete user  by I.D.
+export const deleteUser = async(req, res)=>{
+    //this part doesn't change for getting stuff by id so copy and paste it
+    try {
+        const id = req.params.id;
+        const userExist = await User.findById(id);
+        if(!userExist){
+            return res.status(404).json({message:"User not found."});
+        }
+    //this is the part that actually changes depending on what action you want (delete, update, read)
+    await User.findByIdAndDelete(id);
+    res.status(200).json({message:"User deleted successfully."});
+    } catch (error) {
+        res.status(500).json({errorMessage:error.message});
+
+    }
 }
-
-
 
