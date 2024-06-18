@@ -17,9 +17,11 @@
     color:white;
 }
 
-.userTable table thead td{
+.userTable table tbody td{
     padding: 10px;
     text-align: center;
     vertical-align: middle;
 }
+
+
 
