@@ -1,0 +1,17 @@
+.userTable{
+    width: 60%;
+    /* 50px will be height, auto is the width */
+    margin:50px auto; 
+    background-color: white;
+    padding:50px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.65);
+}
+.userTable table {
+    width:100%;
+    margin-top: 30px;
+}
+
+
+
+

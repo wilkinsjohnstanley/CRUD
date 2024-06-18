@@ -4,6 +4,11 @@ import "./user.css"
 const User = () => {
   return (
     <div className='userTable'>
+
+<button type="button" class="btn btn-primary">
+  Add User
+  </button>
+
       <table className='table table-bordered'>
         <thead>
           <tr>
