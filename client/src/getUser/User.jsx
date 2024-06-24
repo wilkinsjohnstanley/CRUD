@@ -47,14 +47,14 @@ useEffect(()=>{
           </tr>
         </thead>
         <tbody>
-          {/* we will use the math function to iterate thru the array */}
+          {/* we will use the map function to iterate thru the array */}
           {users.map((user, index)=>{
             return (
             <tr>
-            <td>1</td>
-            <td>John</td>
-            <td>John@gmail.com</td>
-            <td>USA</td>
+            <td>{index+1}</td>
+            <td>{user.name}</td>
+            <td>{user.email}</td>
+            <td>{user.address}</td>
             <td className='actionButtons'>
             <button type="button" class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></button>
             <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
