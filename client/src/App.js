@@ -1,12 +1,17 @@
 import './App.css';
 import User from "./getUser/User";
-
+import {RouterProvider,createBrowserRouter} from "react-router-dom";
 function App() {
+  const route = createBrowserRouter([
+    {
+      path:"/",
+      element:<User/>,
+    },
+  ]);
   return (
     <div className="App">
-      <User/>
+      <RouterProvider router={route}></RouterProvider>
     </div>
   );
 }
-
 export default App;
