@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './adduser.css';
 
 const AddUser = () => {
   return (
@@ -35,6 +36,11 @@ const AddUser = () => {
           placeholder='Enter your address'
           />
           </div>
+          {/* Let's add a submit button! */}
+          <div className='inputGroup'>
+          <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+
        </form>
     </div>
   )
