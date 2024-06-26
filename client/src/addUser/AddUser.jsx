@@ -14,6 +14,8 @@ const AddUser = () => {
           autoComplete='off'
           placeholder='Enter your name'
           />
+          </div>
+          <div className='inputGroup'>
           <label htmlFor='email'>Email:</label>
           <input 
           type='text'
@@ -22,6 +24,8 @@ const AddUser = () => {
           autoComplete='off'
           placeholder='Enter your email'
           />
+          </div>
+          <div className='inputGroup'>
           <label htmlFor='address'>Address:</label>
           <input 
           type='text'
@@ -30,12 +34,14 @@ const AddUser = () => {
           autoComplete='off'
           placeholder='Enter your address'
           />
-        </div>
+          </div>
        </form>
     </div>
   )
 }
 
 export default AddUser
+
+
 
 
