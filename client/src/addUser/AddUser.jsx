@@ -4,7 +4,14 @@ import './adduser.css';
 const AddUser = () => {
   return (
     <div className='addUser'>
+
        <h3>Add New User</h3>
+{/* chanfe from button tag to link tag with to="/" to take the user back to the homepage */}
+       <button type="button" class="btn btn-secondary">
+       <i class="fa-solid fa-backward"></i> Back
+         
+        </button>
+
        <form className='addUserForm'>
         <div className='inputGroup'>
           <label htmlFor='name'>Name:</label>
