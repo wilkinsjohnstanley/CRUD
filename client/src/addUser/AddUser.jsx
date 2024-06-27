@@ -6,11 +6,11 @@ const AddUser = () => {
     <div className='addUser'>
 
        <h3>Add New User</h3>
-{/* chanfe from button tag to link tag with to="/" to take the user back to the homepage */}
-       <button type="button" class="btn btn-secondary">
+{/* change from button tag to link tag with to="/" to take the user back to the homepage */}
+       <Link to="/" type="button" class="btn btn-secondary">
        <i class="fa-solid fa-backward"></i> Back
          
-        </button>
+        </Link>
 
        <form className='addUserForm'>
         <div className='inputGroup'>
