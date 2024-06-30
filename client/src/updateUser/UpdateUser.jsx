@@ -35,7 +35,7 @@ const UpdateUser = () => {
 // function to submit the form.
 const submitForm = async(e)=>{
   e.preventDefault();
-  await axios.post("http://localhost:8000/api/user", user)
+  await axios.put(`http://localhost:8000/api/update/user/${id}`, user)
   .then((response)=>{
     // console.log("User created successfully.")
     toast.success(response.data.message, {position:"top-center"})

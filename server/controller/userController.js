@@ -59,7 +59,9 @@ export const update = async(req, res)=>{
        const updatedData =  await User.findByIdAndUpdate(id, req.body, {
             new:true
         })
-        res.status(200).json(updatedData);
+        // res.status(200).json(updatedData);
+        res.status(200).json({message:"The user has been updated!"});
+
     } catch (error) {
         res.status(500).json({errorMessage:error.message});
     }
