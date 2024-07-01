@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./user.css";
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import toast from "react-hot-toast";
 
 const User = () => {
 // we will first define variables
@@ -28,6 +29,19 @@ useEffect(()=>{
 
   //empty array [] ensures it only runs once
 },[]);
+
+// delete user function, now call it as an onClick for delete button
+const deleteUser = async(userId) =>{
+  await axios.delete(`http://localhost:8000/api/delete/user/${userId}`)
+  .then((response)=>{
+    setUsers((prevUser)=>prevUser.filter((user)=>user._id !==userId))
+    toast.success(response.data.message,{position:"top-center"})
+
+  })
+  .catch((error)=>{
+    console.log(error);
+  });
+};
 
 
   return (
@@ -61,8 +75,8 @@ useEffect(()=>{
             type="button" class="btn btn-info">
               <i class="fa-solid fa-pen-to-square"></i>
               </Link>
-
-            <button type="button" class="btn btn-danger">
+{/* This is the delete button */}
+            <button onClick={()=>deleteUser(user._id)} type="button" class="btn btn-danger">
               <i class="fa-solid fa-trash"></i>
               </button>
             
